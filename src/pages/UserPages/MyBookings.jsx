@@ -7,7 +7,7 @@ function MyBookings({ currentUser }) {
     useEffect(() => {
         const fetchExpiredBooking = async () => {
             try {
-                const expiredBookingRes = await axios.get(`http://localhost:8000/api/v1/bookings/user/${currentUser.id}/expired`,
+                const expiredBookingRes = await axios.get(`${import.meta.env.VITE_URL}/api/v1/bookings/user/${currentUser.id}/expired`,
                     {
                         withCredentials: true,
                         headers: {
@@ -24,7 +24,7 @@ function MyBookings({ currentUser }) {
 
         const fetchFutureBooking = async () => {
             try {
-                const futureBookingRes = await axios.get(`http://localhost:8000/api/v1/bookings/user/${currentUser.id}/future`,
+                const futureBookingRes = await axios.get(`${import.meta.env.VITE_URL}/api/v1/bookings/user/${currentUser.id}/future`,
                     {
                         withCredentials: true,
                         headers: {

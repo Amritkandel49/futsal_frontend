@@ -29,7 +29,7 @@ function RegisterTurf() {
     });
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/owners/register-turf', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_URL}/api/v1/owners/register-turf`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',

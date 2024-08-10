@@ -9,7 +9,7 @@ function Turfs() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/v1/turfs/', {
+                const response = await axios.get(`${import.meta.env.VITE_URL}/api/v1/turfs/`, {
                     withCredentials: true,
                     headers: {
                         'Content-Type': 'application/json'
